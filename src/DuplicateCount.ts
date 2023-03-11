@@ -1,11 +1,11 @@
 function duplicateCount(text: string): number {
-  let letters = new Set();
+  let letters: Set<string> = new Set();
 
-  const lettersArray = text.split("").map((letter) => {
+  const lettersArray: string[] = text.split("").map((letter: string) => {
     return letter.toLowerCase();
   });
 
-  const duplicatedLetters = lettersArray.filter((letter) => {
+  const duplicatedLetters: string[] = lettersArray.filter((letter: string) => {
     return lettersArray.lastIndexOf(letter) > lettersArray.indexOf(letter);
   });
 
@@ -15,3 +15,7 @@ function duplicateCount(text: string): number {
 
   return letters.size;
 }
+
+const count = duplicateCount("aA11");
+
+console.log(count);
