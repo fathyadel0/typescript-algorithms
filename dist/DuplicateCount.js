@@ -12,5 +12,3 @@ function duplicateCount(text) {
     });
     return letters.size;
 }
-const count = duplicateCount("aA11");
-console.log(count);
